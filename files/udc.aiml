@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>I have no answer for that.</template>
+  </category>
+  
+<category>
+    <pattern>Hello *</pattern>
+    <template>Hello User</template>
+</category>
+
+<category>
+    <pattern>My name is * *</pattern>
+    <template>Hello <set name="firstname"><star/></set> <set name="surname"><star index="2"/></set>.</template>
+</category>
+
+
+<category>
+    <pattern>What is my first name</pattern>
+    <template>Your first name is <get name="firstname"/></template>
+</category>
+
+<category>
+    <pattern>What is my surname</pattern>
+    <template>Your surname is <get name="surname"/></template>
+</category>
+
+<category>
+    <pattern>What is my last name</pattern>
+    <template>Your last name is <get name="surname"/></template>
+</category>
+
+<category>
+    <pattern>what is my name</pattern>
+    <template>Your name is <get name="firstname"/><star/> <get name="surname"/><star index="2"/>.</template>
+</category>
+
+</aiml>
